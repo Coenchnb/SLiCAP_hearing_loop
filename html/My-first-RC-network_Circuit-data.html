@@ -1,0 +1,103 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Circuit data"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Circuit data</h1></div>
+<h2>Circuit diagram</h2>
+<figure><a id="fig_receiver_network"></a><img src="img/SLiCAPReceiver.svg" alt="Circuit diagram of the receiver network." style="width:250px">
+<figcaption>Figure: SLiCAPReceiver.svg<br>Circuit diagram of the receiver network.</figcaption>
+</figure>
+<h2><a id="netlist"></a>Netlist: SLiCAPReceiver.cir</h2>
+<pre>"My first RC network"
+* C:\Users\chnbu\Documents\SLiCAP\SLiCAP_hearing_loop\cir\SLiCAPReceiver.asc
+R1 N005 N004 R value={R1} noisetemp=0 noiseflow=0 dcvar=0 dcvarlot=0
+R2 N001 N002 R value = 10k noisetemp=0 dcvar=0 dcvarlot=0
+R3 N002 0 R value = 10k noisetemp=0 dcvar=0 dcvarlot=0
+R4 N006 N007 R value={R4} noisetemp=0 noiseflow=0 dcvar=0 dcvarlot=0
+R5 N003 N006 R value={R5} noisetemp=0 noiseflow=0 dcvar=0 dcvarlot=0
+C1 N002 N005 C value={C1} vinit=0
+C2 N003 N006 C value={C2} vinit=0
+C3 N007 0 C value={C3} vinit=0
+V3 N001 0 5
+N1 N003 0 N002 N006
+V1 N004 0 V value=0 dc=0 dcvar=0 noise=0
+.backanno
+.end
+</pre>
+<a id="elementData"></a><table><caption>Table: Element data of expanded netlist 'My first RC network'</caption>
+<tr><th class="left">RefDes</th><th class="left">Nodes</th><th class="left">Refs</th><th class="left">Model</th><th class="left">Param</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+<tr><td class="left">C1</td><td class = "left">N002 N005 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$C_{1}$</td><td class="left">$C_{1}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">vinit</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">C2</td><td class = "left">N003 N006 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$C_{2}$</td><td class="left">$C_{2}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">vinit</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">C3</td><td class = "left">N007 0 </td><td class = "left"></td><td class = "left">C</td>
+<td class="left">value</td><td class="left">$C_{3}$</td><td class="left">$C_{3}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">vinit</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">N1</td><td class = "left">N003 0 N002 N006 </td><td class = "left"></td><td class = "left">N</td>
+<td></td><td></td><td></td><tr><tr><td class="left">R1</td><td class = "left">N005 N004 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$R_{1}$</td><td class="left">$R_{1}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noisetemp</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noiseflow</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvarlot</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">R2</td><td class = "left">N001 N002 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$1.0 \cdot 10^{4}$</td><td class="left">$1.0 \cdot 10^{4}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noisetemp</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvarlot</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noiseflow</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">R3</td><td class = "left">N002 0 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$1.0 \cdot 10^{4}$</td><td class="left">$1.0 \cdot 10^{4}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noisetemp</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvarlot</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noiseflow</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">R4</td><td class = "left">N006 N007 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$R_{4}$</td><td class="left">$R_{4}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noisetemp</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noiseflow</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvarlot</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">R5</td><td class = "left">N003 N006 </td><td class = "left"></td><td class = "left">R</td>
+<td class="left">value</td><td class="left">$R_{5}$</td><td class="left">$R_{5}$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noisetemp</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noiseflow</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvarlot</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">V1</td><td class = "left">N004 0 </td><td class = "left"></td><td class = "left">V</td>
+<td class="left">value</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dc</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noise</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td class="left">V3</td><td class = "left">N001 0 </td><td class = "left"></td><td class = "left">V</td>
+<td class="left">value</td><td class="left">$5$</td><td class="left">$5$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dc</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">dcvar</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+<tr><td></td><td></td><td></td><td></td><td class="left">noise</td><td class="left">$0$</td><td class="left">$0$</td></tr>
+</table>
+<a id="params"></a><table><caption>Table: Parameter definitions in 'My first RC network'.</caption>
+<tr><th class="left">Name</th><th class="left">Symbolic</th><th class="left">Numeric</th></tr>
+</table>
+<table><caption>Table: Parameters without definition in 'My first RC network.</caption>
+
+<tr><th class="left">Name</th></tr>
+<tr><td class="left">$R_{5}$</td></tr>
+<tr><td class="left">$C_{1}$</td></tr>
+<tr><td class="left">$R_{4}$</td></tr>
+<tr><td class="left">$R_{1}$</td></tr>
+<tr><td class="left">$C_{3}$</td></tr>
+<tr><td class="left">$C_{2}$</td></tr>
+</table>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="My-first-RC-network_index.html">My-first-RC-network_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.6.0 &copy 2009-2024 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="https://analog-electronics.tudelft.nl">analog-electronics.tudelft.nl</a></p>
+<p>Last project update: 2024-03-27 14:15:43</p>
+</div></body></html>

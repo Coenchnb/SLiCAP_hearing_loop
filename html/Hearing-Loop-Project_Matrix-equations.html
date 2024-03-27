@@ -1,0 +1,40 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Matrix equations"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Matrix equations</h1></div>
+<p>The MNA matrix equation for the RC network is:</p>
+<h3><a id="MNA"></a>Matrix equation:</h3>
+\begin{equation}
+\left[\begin{matrix}5\\0\\0\\0\\0\\0\\0\\0\\0\\0\end{matrix}\right]=\left[\begin{matrix}0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0.0001 & -0.0001 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & -0.0001 & C_{1} s + 0.0002 & 0 & - C_{1} s & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & \frac{1}{R_{1}} & - \frac{1}{R_{1}} & 0 & 0 & 0\\0 & 0 & 0 & 0 & - C_{1} s & - \frac{1}{R_{1}} & C_{1} s + \frac{1}{R_{1}} & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & C_{2} s + \frac{1}{R_{5}} + \frac{1}{R_{4}} & - \frac{1}{R_{4}} & - C_{2} s - \frac{1}{R_{5}}\\0 & 0 & 0 & 0 & 0 & 0 & 0 & - \frac{1}{R_{4}} & C_{3} s + \frac{1}{R_{4}} & 0\\0 & 1 & 0 & 0 & 0 & 0 & 0 & - C_{2} s - \frac{1}{R_{5}} & 0 & C_{2} s + \frac{1}{R_{5}}\end{matrix}\right]\cdot\left[\begin{matrix}I_{V3}\\Io_{N1}\\I_{V1}\\V_{N001}\\V_{N002}\\V_{N003}\\V_{N004}\\V_{N005}\\V_{N006}\\V_{out}\end{matrix}\right]
+\end{equation}
+<p>The vector with independent variables is:</p>
+<a id="Iv"></a>
+\begin{equation}
+I_{v}=\left[\begin{matrix}5\\0\\0\\0\\0\\0\\0\\0\\0\\0\end{matrix}\right]
+\end{equation}
+<p>The MNA matrix is:</p>
+<a id="M"></a>
+\begin{equation}
+M=\left[\begin{matrix}0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0.0001 & -0.0001 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & -0.0001 & C_{1} s + 0.0002 & 0 & - C_{1} s & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & \frac{1}{R_{1}} & - \frac{1}{R_{1}} & 0 & 0 & 0\\0 & 0 & 0 & 0 & - C_{1} s & - \frac{1}{R_{1}} & C_{1} s + \frac{1}{R_{1}} & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & C_{2} s + \frac{1}{R_{5}} + \frac{1}{R_{4}} & - \frac{1}{R_{4}} & - C_{2} s - \frac{1}{R_{5}}\\0 & 0 & 0 & 0 & 0 & 0 & 0 & - \frac{1}{R_{4}} & C_{3} s + \frac{1}{R_{4}} & 0\\0 & 1 & 0 & 0 & 0 & 0 & 0 & - C_{2} s - \frac{1}{R_{5}} & 0 & C_{2} s + \frac{1}{R_{5}}\end{matrix}\right]
+\end{equation}
+<p>The vector with dependent variables is:</p>
+<a id="Dv"></a>
+\begin{equation}
+D_{v}=\left[\begin{matrix}I_{V3}\\Io_{N1}\\I_{V1}\\V_{N001}\\V_{N002}\\V_{N003}\\V_{N004}\\V_{N005}\\V_{N006}\\V_{out}\end{matrix}\right]
+\end{equation}
+<a id="gainLaplace"></a>
+\begin{equation}
+\frac{V_{out}}{V_{1}}=\frac{5000 C_{1} s \left(C_{2} C_{3} R_{4} R_{5} s^{2} + s \left(C_{3} R_{4} + R_{5} \left(C_{2} + C_{3}\right)\right) + 1\right)}{C_{1} C_{2} C_{3} R_{4} R_{5} s^{3} \left(R_{1} + 5000\right) + s^{2} \left(C_{1} C_{3} R_{4} \left(R_{1} + 5000\right) + C_{2} R_{5} \left(C_{1} R_{1} + 5000 C_{1} + C_{3} R_{4}\right)\right) + s \left(C_{1} R_{1} + 5000 C_{1} + C_{2} R_{5} + C_{3} R_{4}\right) + 1}
+\end{equation}
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Hearing-Loop-Project_index.html">Hearing-Loop-Project_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.6.0 &copy 2009-2024 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="https://analog-electronics.tudelft.nl">analog-electronics.tudelft.nl</a></p>
+<p>Last project update: 2024-03-27 15:21:45</p>
+</div></body></html>

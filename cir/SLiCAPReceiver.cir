@@ -1,0 +1,15 @@
+"Hearing Loop Project"
+* C:\Users\chnbu\Documents\SLiCAP\SLiCAP_hearing_loop\cir\SLiCAPReceiver.asc
+R1 N004 N003 R value={R1} noisetemp=0 noiseflow=0 dcvar=0 dcvarlot=0
+R2 N001 N002 R value = 10k noisetemp=0 dcvar=0 dcvarlot=0
+R3 N002 0 R value = 10k noisetemp=0 dcvar=0 dcvarlot=0
+R4 N005 N006 R value={R4} noisetemp=0 noiseflow=0 dcvar=0 dcvarlot=0
+R5 out N005 R value={R5} noisetemp=0 noiseflow=0 dcvar=0 dcvarlot=0
+C1 N002 N004 C value={C1} vinit=0
+C2 out N005 C value={C2} vinit=0
+C3 N006 0 C value={C3} vinit=0
+V3 N001 0 5
+N1 out 0 N002 N005
+V1 N003 0 V value=0 dc=0 dcvar=0 noise=0
+.backanno
+.end
